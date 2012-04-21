@@ -290,8 +290,9 @@ if !has("gui_running")
    nmap OC l
    nmap OD h
 endif
-
-
+" Don't close <. It's more annoying than useful
+autocmd filetype * 
+         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
 
 " --- Command-T
 let g:CommandTMaxHeight = 15
